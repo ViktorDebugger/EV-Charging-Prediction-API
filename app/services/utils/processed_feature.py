@@ -106,15 +106,13 @@ def prepare_dataframe(features: List[ProcessedFeature]) -> pd.DataFrame:
     
     return pd.DataFrame(data)
 
-
-
 def prepare_data(df):
     conditions = [
         df['charger_type_Level_1'] == True,
         df['charger_type_Level_2'] == True
     ]
     choices = ['Level_1', 'Level_2']
-    df['ChargerType_Target'] = np.select(conditions, choices, default='DC Fast Charger')
+    df['ChargerType_Target'] = np.select(conditions, choices, default='DC_Fast_Charger')
     
     y_column = 'ChargerType_Target'
 

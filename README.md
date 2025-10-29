@@ -109,14 +109,14 @@ curl -X POST "http://127.0.0.1:8000/train_model"
   "f1_score": 0.952,
   "train_size": 9000,
   "test_size": 1000,
-  "classes": ["DC Fast Charger", "Level_1", "Level_2"],
+  "classes": ["DC_Fast_Charger", "Level_1", "Level_2"],
   "confusion_matrix": [
     [320, 5, 8],
     [3, 315, 4],
     [6, 2, 337]
   ],
   "classification_report": {
-    "DC Fast Charger": {
+    "DC_Fast_Charger": {
       "precision": 0.9726,
       "recall": 0.9609,
       "f1-score": 0.9667
@@ -174,10 +174,10 @@ curl -X POST "http://127.0.0.1:8000/predict" \
 ```json
 {
   "status": "success",
-  "predicted_class": "DC Fast Charger",
+  "predicted_class": "DC_Fast_Charger",
   "confidence": 0.8521,
   "probabilities": {
-    "DC Fast Charger": 0.8521,
+    "DC_Fast_Charger": 0.8521,
     "Level_1": 0.0789,
     "Level_2": 0.069
   },
@@ -325,7 +325,7 @@ curl -X POST "http://127.0.0.1:8000/predict" \
   "inference_input_id": 15,
   "processed_features_id": null,
   "actual_class": null,
-  "predicted_class": "DC Fast Charger",
+  "predicted_class": "DC_Fast_Charger",
   "confidence": 0.8521,
   "source": "inference"
 }
@@ -373,7 +373,7 @@ curl -X POST "http://127.0.0.1:8000/predict" \
   "accuracy": 0.9523,
   "train_size": 9000,
   "test_size": 1000,
-  "classes": ["DC Fast Charger", "Level_1", "Level_2"],
+  "classes": ["DC_Fast_Charger", "Level_1", "Level_2"],
   "precision": 0.9521,
   "recall": 0.9523,
   "f1_score": 0.952
@@ -395,10 +395,10 @@ curl -X POST "http://127.0.0.1:8000/predict" \
     "user_type": "Commuter"
   },
   "prediction": {
-    "predicted_class": "DC Fast Charger",
+    "predicted_class": "DC_Fast_Charger",
     "confidence": 0.8521,
     "probabilities": {
-      "DC Fast Charger": 0.8521,
+      "DC_Fast_Charger": 0.8521,
       "Level_1": 0.0789,
       "Level_2": 0.069
     }
@@ -416,3 +416,4 @@ curl -X POST "http://127.0.0.1:8000/predict" \
 - **Pandas/NumPy** - обробка даних
 - **Pydantic** - валідація даних
 - **Uvicorn** - ASGI сервер
+

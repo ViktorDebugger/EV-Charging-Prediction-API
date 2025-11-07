@@ -126,28 +126,3 @@ async def predict(input_data: InferenceInput):
         )
         
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
-
-
-'''
-{
-  "user_id": "User_1",
-  "vehicle_model": "BMW i3",
-  "battery_capacity_kwh": 108.463007412840720,
-  "vehicle_age_years": 2,
-  "charging_station_id": "Station_391",
-  "charging_station_location": "Houston",
-  "charging_start_time": "2024-01-01 00:00:00",
-  "charging_end_time": "2024-01-01 00:39:00",
-  "energy_consumed_kwh": 60.712345734927770,
-  "charging_duration_h": 0.591363425358500,
-  "charging_rate_kw": 36.289180566988140,
-  "charging_cost_usd": 13.087716791774450,
-  "time_of_day": "Evening",
-  "day_of_week": "Tuesday",
-  "state_of_charge_start": 29.371579797140050,
-  "state_of_charge_end": 86.119962444578390,
-  "distance_driven_since_last_charge_km": 293.602110638327930,
-  "temperature_c": 27.947593055800100,
-  "user_type": "Commuter"
-}
-'''

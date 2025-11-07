@@ -18,8 +18,3 @@ app.add_middleware(
 
 app.include_router(training.router, prefix="", tags=["training"])
 app.include_router(inference.router, prefix="", tags=["inference"])
-
-
-'''
-python -m uvicorn app.main:app --reload
-'''
